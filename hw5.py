@@ -37,13 +37,16 @@ ind_r = my_str.rfind(r_limit)
 sub_str = my_str[ind_l + 1:ind_r]
 print(sub_str)
 ####################################################################
-my_str = 'abcd'
+my_str = 'abcde'
+par_str1 = []
+par_str = []
 if len(my_str) % 2:
-    my_str += '_'
-    print(my_str)
-for index in range(len(my_str) // 2):
-    par_str = [my_str[:2], my_str[2::]]
-print(par_str)
+    par_str1 = [my_str[:2], my_str[2:4:], my_str[4::] + '_']
+    print(par_str1)
+else:
+    for index in range(len(my_str) // 2):
+        par_str = [my_str[:2], my_str[2::]]
+    print(par_str)
 ####################################################################
 list_num = [2,4,1,5,3,9,0,7]
 res_list = []
