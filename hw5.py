@@ -40,13 +40,14 @@ print(sub_str)
 my_str = input('Введите строку: ')
 my_str = my_str.replace(' ', '')
 par_str = []
-if len(my_str) != 0 and len(my_str) % 2:
+if len(my_str) % 2 != 0:
     my_str += '_'
-else:
-    print('Вы ввели что-то не так')
 for index in range(0, len(my_str), 2):
-    par_str.append(my_str[index:index+2])
-print(par_str)
+    par_str.append(my_str[index:index + 2])
+if len(par_str) >= 1:
+    print(par_str)
+elif len(my_str) == 0:
+    print('Вы ввели что-то не так')
 ####################################################################
 list_num = [2, 4, 1, 5, 3, 9, 0, 7]
 res_list = []
