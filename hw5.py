@@ -40,8 +40,10 @@ print(sub_str)
 my_str = input('Введите строку: ')
 my_str = my_str.replace(' ', '')
 par_str = []
-if len(my_str) % 2:
+if len(my_str) != 0 and len(my_str) % 2:
     my_str += '_'
+else:
+    print('Вы ввели что-то не так')
 for index in range(0, len(my_str), 2):
     par_str.append(my_str[index:index+2])
 print(par_str)
