@@ -1,9 +1,11 @@
 my_list = ['qwe', 'qwe', 'qwe', 'qwe']
-for i in range(len(my_list)):
-  if not i % 2:
-      my_list[i] = my_list[i][::-1]
+res = []
+for index in range(len(my_list)):
+    if not index % 2:
+        res = my_list
+        res[index] = res[index][::-1]
 
-print(my_list)
+print(res)
 ########################################################
 my_list = ['Avatar', 'vsdfsdf', 'fsdfg', 'amogus']
 new_list = []
